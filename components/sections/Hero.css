@@ -1,0 +1,52 @@
+.feature-badge {
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+/* .feature-badge:hover, .feature-badge:focus {
+  background: hsl(var(--primary));
+  color: #fff;
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.15);
+} */
+.pulse-badge {
+  animation: pulse-badge 1.5s infinite;
+}
+@keyframes pulse-badge {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px hsl(var(--primary) / 0.0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.0);
+  }
+}
+.prominent-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px 0 rgba(16, 185, 129, 0.10);
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid #e5e7eb;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.prominent-badge:hover, .prominent-badge:focus {
+  box-shadow: 0 8px 24px 0 rgba(16, 185, 129, 0.18);
+  /* border: 1.5px solid hsl(var(--primary)); */
+}
+.badge-phrase {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 0.18rem;
+  letter-spacing: 0.01em;
+  opacity: 0.95;
+}
+.prominent-badge:hover .badge-phrase, .prominent-badge:focus .badge-phrase {
+  color: hsl(var(--primary));
+  opacity: 1;
+} 

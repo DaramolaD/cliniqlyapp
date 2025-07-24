@@ -12,13 +12,8 @@ import {
   AlertCircle,
   Eye,
   Edit,
-  User,
-  MapPin,
-  Phone,
-  Calendar,
   Plus,
-  Users,
-  Building
+  Users
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Label } from "@/components/ui/label";

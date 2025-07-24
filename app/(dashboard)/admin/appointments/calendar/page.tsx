@@ -345,7 +345,7 @@ export default function AdminCalendarPage() {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Calendar className="w-5 h-5 mr-2 text-primary" />
-              Today's Appointments ({new Date().toLocaleDateString()})
+              Today&apos;s Appointments ({new Date().toLocaleDateString()})
             </CardTitle>
           </CardHeader>
           <CardContent>

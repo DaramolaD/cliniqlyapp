@@ -94,7 +94,7 @@ const ProblemSolution = () => {
             Problem Solved
           </div>
           <h2 className="text-3xl font-bold text-gray-900 leading-tight">
-            We get it. Scheduling shouldn't be this hard.
+            We get it. Scheduling shouldn&apos;t be this hard.
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             You became a healthcare professional to help people, not to juggle spreadsheets and chase down appointment confirmations.

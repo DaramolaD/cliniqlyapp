@@ -37,7 +37,7 @@ export function ProtectedRoute({
       }
 
       // If user's role is not allowed, redirect to appropriate dashboard
-      if (!allowedRoles.includes(role as any)) {
+      if (!allowedRoles.includes(role as 'client' | 'staff' | 'admin')) {
         switch (role) {
           case 'client':
             router.push('/client')
@@ -66,7 +66,7 @@ export function ProtectedRoute({
   }
 
   // If user is not authenticated or doesn't have the right role, don't render children
-  if (!user || !profile || !allowedRoles.includes(role as any)) {
+  if (!user || !profile || !allowedRoles.includes(role as 'client' | 'staff' | 'admin')) {
     return null
   }
 

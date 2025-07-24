@@ -8,8 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { 
   Users, 
@@ -34,11 +33,26 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+interface Patient {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  age: number;
+  gender: string;
+  status: string;
+  lastVisit: string;
+  nextAppointment: string | null;
+  department: string;
+  avatar: string;
+  patientId: string;
+}
+
 export default function PatientsPage() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
-  const [selectedPatient, setSelectedPatient] = useState<any>(null);
+  const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const [isAddPatientModalOpen, setIsAddPatientModalOpen] = useState(false);
 
   // Mock patient data
@@ -149,15 +163,15 @@ export default function PatientsPage() {
     setIsAddPatientModalOpen(true);
   };
 
-  const handleViewPatient = (patient: any) => {
+  const handleViewPatient = (patient: Patient) => {
     router.push(`/staff/patients/${patient.id}`);
   };
 
-  const handleEditPatient = (patient: any) => {
+  const handleEditPatient = (patient: Patient) => {
     router.push(`/staff/patients/${patient.id}/edit`);
   };
 
-  const handleViewMedicalRecords = (patient: any) => {
+  const handleViewMedicalRecords = (patient: Patient) => {
     router.push(`/staff/patients/${patient.id}/records`);
   };
 
@@ -214,7 +228,7 @@ export default function PatientsPage() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Today's Appointments</p>
+                  <p className="text-sm font-medium text-muted-foreground">Today&apos;s Appointments</p>
                   <p className="text-2xl font-bold text-foreground">8</p>
                 </div>
                 <Calendar className="w-8 h-8 text-blue-600" />

@@ -26,6 +26,15 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+interface Notification {
+  id: number;
+  title: string;
+  message: string;
+  time: string;
+  type: string;
+  link?: string;
+}
+
 export default function StaffDashboard() {
   const router = useRouter();
   const [currentTime] = useState(new Date());
@@ -183,7 +192,7 @@ export default function StaffDashboard() {
     router.push(`/staff/appointments/${appointmentId}`);
   };
 
-  const handleViewNotification = (notification: any) => {
+  const handleViewNotification = (notification: Notification) => {
     if (notification.link) {
       router.push(notification.link);
     }
@@ -203,7 +212,7 @@ export default function StaffDashboard() {
           <div>
             <h1 className="text-3xl font-bold text-foreground">Staff Dashboard</h1>
             <p className="text-muted-foreground">
-              Welcome back, Dr. Johnson. Here's what's happening today.
+              Welcome back, Dr. Johnson. Here&apos;s what&apos;s happening today.
             </p>
           </div>
           <div className="flex items-center space-x-4">
@@ -256,7 +265,7 @@ export default function StaffDashboard() {
               <CardTitle className="flex items-center justify-between">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  Today's Appointments
+                  Today&apos;s Appointments
                 </div>
                 <Button 
                   variant="outline" 

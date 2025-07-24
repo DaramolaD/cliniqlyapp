@@ -46,7 +46,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about Cliniqly. Can't find the answer you're looking for? 
+            Everything you need to know about Cliniqly. Can&apos;t find the answer you&apos;re looking for? 
             <a href="#" className="text-primary hover:underline ml-1">Chat with our team</a>.
           </p>
         </div>

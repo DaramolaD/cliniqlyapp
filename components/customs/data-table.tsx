@@ -75,12 +75,12 @@ export function DataTable<T extends { id?: string | number }>({
 
   // Filter and sort data
   const processedData = useMemo(() => {
-    let filtered = data.filter(item => {
+    const filtered = data.filter(item => {
       // Search filter
       if (searchTerm) {
         const searchableText = columns
           .filter(col => !col.render) // Only search in non-custom rendered columns
-          .map(col => String((item as any)[col.key]))
+          .map(col => String((item as Record<string, unknown>)[col.key]))
           .join(' ')
           .toLowerCase();
         
@@ -91,7 +91,7 @@ export function DataTable<T extends { id?: string | number }>({
 
       // Column filters
       for (const [key, value] of Object.entries(activeFilters)) {
-        if (value && value !== "all" && (item as any)[key] !== value) {
+        if (value && value !== "all" && (item as Record<string, unknown>)[key] !== value) {
           return false;
         }
       }
@@ -102,8 +102,8 @@ export function DataTable<T extends { id?: string | number }>({
     // Sort data
     if (sortColumn) {
       filtered.sort((a, b) => {
-        const aVal = (a as any)[sortColumn];
-        const bVal = (b as any)[sortColumn];
+        const aVal = (a as Record<string, unknown>)[sortColumn];
+        const bVal = (b as Record<string, unknown>)[sortColumn];
         
         if (aVal < bVal) return sortDirection === 'asc' ? -1 : 1;
         if (aVal > bVal) return sortDirection === 'asc' ? 1 : -1;
@@ -273,7 +273,7 @@ export function DataTable<T extends { id?: string | number }>({
                   >
                     {columns.map((column) => (
                       <TableCell key={column.key}>
-                        {column.render ? column.render(item) : (item as any)[column.key]}
+                        {column.render ? column.render(item) : (item as Record<string, unknown>)[column.key]}
                       </TableCell>
                     ))}
                     {actions && (

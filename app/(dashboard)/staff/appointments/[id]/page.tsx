@@ -148,7 +148,7 @@ export default function StaffAppointmentDetailPage() {
         <div className="p-6">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-foreground mb-4">Appointment Not Found</h1>
-            <p className="text-muted-foreground mb-4">The appointment you're looking for doesn't exist.</p>
+            <p className="text-muted-foreground mb-4">The appointment you&apos;re looking for doesn&apos;t exist.</p>
             <Button onClick={() => router.push('/staff/appointments')} className="health-btn-primary">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Appointments

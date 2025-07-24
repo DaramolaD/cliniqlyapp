@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Calendar,
-  Bell,
-  FileText,
-  Users,
-  BarChart3,
+import { 
+  Calendar, 
+  Bell, 
+  FileText, 
+  Users, 
+  BarChart3, 
   MessageSquare,
   Stethoscope,
   CreditCard,
@@ -240,7 +240,7 @@ const Features = () => {
             designed for today&apos;s healthcare needs.
           </p>
         </div>
-
+        
         {/* Core Features Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-24">
           {coreFeatures.map((feature, index) => {
@@ -251,28 +251,28 @@ const Features = () => {
                 className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
+                
                 {/* Image Section */}
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={feature.image}
+                    src={feature.image} 
                     alt={feature.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
+                  
                   {/* Icon Badge */}
                   <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
                     <IconComponent className="w-6 h-6 text-primary" />
                   </div>
-
+                  
                   {/* Stats Badge */}
                   <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-primary shadow-lg">
                     {feature.stats}
                   </div>
                 </div>
-
+                
                 {/* Content Section */}
                 <CardContent className="px-5 py-4 md:p-8">
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
@@ -281,7 +281,7 @@ const Features = () => {
                   <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                     {feature.description}
                   </p>
-
+                  
                   {/* Capabilities List */}
                   <div className="space-y-3">
                     {feature.capabilities.map((capability, idx) => (
@@ -316,7 +316,7 @@ const Features = () => {
               Real results from healthcare practices using Cliniqly
             </p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {statisticsData.map((stat, index) => (
               <div key={index} className="text-center group h-full">
@@ -350,7 +350,7 @@ const Features = () => {
               Comprehensive features for modern healthcare delivery
             </p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
@@ -362,7 +362,7 @@ const Features = () => {
                   <div className="relative">
                     <div className="w-full h-48 overflow-hidden">
                       <Image
-                        src={feature.image}
+                        src={feature.image} 
                         alt={feature.title}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -403,7 +403,7 @@ const Features = () => {
               Everything you need to run a modern healthcare practice
             </p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {additionalCapabilities.map((section, index) => {
               const IconComponent = section.icon;
@@ -450,7 +450,7 @@ const Features = () => {
               </p>
             </CardContent>
           </Card>
-
+          
           <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -464,7 +464,7 @@ const Features = () => {
               </p>
             </CardContent>
           </Card>
-
+          
           <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -479,7 +479,7 @@ const Features = () => {
             </CardContent>
           </Card>
         </div>
-
+        
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-primary/10 via-white to-secondary/20 rounded-3xl px-3 py-12 md:p-12 shadow-xl border border-primary/10">

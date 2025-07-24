@@ -95,7 +95,7 @@ function AccessDenied({ userRole, requiredRoles }: { userRole: string; requiredR
           </div>
           <h1 className="text-2xl font-bold text-foreground mb-2">Access Denied</h1>
           <p className="text-muted-foreground mb-4">
-            You don't have permission to access this page.
+            You don&apos;t have permission to access this page.
           </p>
           <div className="bg-muted p-4 rounded-lg mb-6">
             <p className="text-sm text-muted-foreground">

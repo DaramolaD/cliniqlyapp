@@ -109,7 +109,7 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-2">Something went wrong!</h2>
               <p className="text-muted-foreground max-w-md mx-auto mb-4">
-                We encountered an unexpected error. Don't worry, our team has been notified and is working to fix it.
+                We encountered an unexpected error. Don&apos;t worry, our team has been notified and is working to fix it.
               </p>
               
               {/* Error Details (only in development) */}

@@ -13,9 +13,23 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { User, Phone, Mail, Calendar, AlertTriangle, Trash2, Edit, Eye, Plus, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+interface Patient {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  lastVisit: string;
+  status: string;
+  dateOfBirth: string;
+  address: string;
+  emergencyContact: string;
+  medicalHistory: string;
+  notes: string;
+}
+
 export default function PatientsPage() {
   const router = useRouter();
-  const [selectedPatient, setSelectedPatient] = useState<any>(null);
+  const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isViewModalOpen, setIsViewModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -100,12 +114,12 @@ export default function PatientsPage() {
     }
   };
 
-  const handleViewPatient = (patient: any) => {
+  const handleViewPatient = (patient: Patient) => {
     setSelectedPatient(patient);
     setIsViewModalOpen(true);
   };
 
-  const handleEditPatient = (patient: any) => {
+  const handleEditPatient = (patient: Patient) => {
     router.push(`/admin/patients/${patient.id}/edit`);
   };
 

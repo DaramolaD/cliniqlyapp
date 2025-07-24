@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { 
   Users, 
   Calendar, 
@@ -156,7 +157,7 @@ export default function AdminDashboard() {
           <CardContent>
             <div className="grid grid-cols-2 gap-4">
               <Button variant="outline" className="h-auto p-4 justify-start health-btn-secondary" asChild>
-                <a href="/admin/patients/new">
+                <Link href="/admin/patients/new">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mr-3">
                     <Plus className="w-5 h-5 text-primary" />
                   </div>
@@ -164,11 +165,11 @@ export default function AdminDashboard() {
                     <p className="font-semibold text-foreground">Add Patient</p>
                     <p className="text-sm text-muted-foreground">Register new patient</p>
                   </div>
-                </a>
+                </Link>
               </Button>
 
               <Button variant="outline" className="h-auto p-4 justify-start health-btn-secondary" asChild>
-                <a href="/admin/appointments/new">
+                <Link href="/admin/appointments/new">
                   <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center mr-3">
                     <Calendar className="w-5 h-5 text-accent" />
                   </div>
@@ -176,7 +177,7 @@ export default function AdminDashboard() {
                     <p className="font-semibold text-foreground">Schedule Appointment</p>
                     <p className="text-sm text-muted-foreground">Book new appointment</p>
                   </div>
-                </a>
+                </Link>
               </Button>
 
               <Button variant="outline" className="h-auto p-4 justify-start health-btn-secondary" asChild>

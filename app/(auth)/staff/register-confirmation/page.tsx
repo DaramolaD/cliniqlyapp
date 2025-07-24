@@ -29,7 +29,7 @@ export default function StaffRegisterConfirmation() {
             </div>
             <CardTitle className="text-2xl text-green-600">Request Received</CardTitle>
             <p className="text-muted-foreground">
-              We've received your staff access request and will review it shortly
+              We&apos;ve received your staff access request and will review it shortly
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -82,7 +82,7 @@ export default function StaffRegisterConfirmation() {
                   <div>
                     <p className="text-sm font-medium text-foreground">Email Notification</p>
                     <p className="text-xs text-muted-foreground">
-                      You'll receive an email within 24-48 hours with the decision
+                      You&apos;ll receive an email within 24-48 hours with the decision
                     </p>
                   </div>
                 </div>

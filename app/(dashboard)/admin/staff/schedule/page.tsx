@@ -396,7 +396,7 @@ export default function AdminStaffSchedulePage() {
                 </div>
                 <div className="ml-5 w-0 flex-1">
                   <dl>
-                    <dt className="text-sm font-medium text-muted-foreground truncate">Today's Shifts</dt>
+                    <dt className="text-sm font-medium text-muted-foreground truncate">Today&apos;s Shifts</dt>
                     <dd className="text-lg font-medium text-foreground">
                       {getSchedulesForDate(new Date().toISOString().split('T')[0]).length}
                     </dd>
@@ -523,7 +523,7 @@ export default function AdminStaffSchedulePage() {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Calendar className="w-5 h-5 mr-2 text-primary" />
-              Today's Schedule ({new Date().toLocaleDateString()})
+              Today&apos;s Schedule ({new Date().toLocaleDateString()})
             </CardTitle>
           </CardHeader>
           <CardContent>

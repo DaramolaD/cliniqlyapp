@@ -136,8 +136,8 @@ export default function NotFound() {
               <h2 className="text-4xl font-bold text-foreground mb-2">404</h2>
               <h3 className="text-xl font-semibold text-foreground mb-2">Page Not Found</h3>
               <p className="text-muted-foreground max-w-md mx-auto">
-                The page you're looking for doesn't exist or has been moved. 
-                Let's get you back on track.
+                The page you&apos;re looking for doesn&apos;t exist or has been moved. 
+                Let&apos;s get you back on track.
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export default function NotFound() {
             {/* Search Suggestion */}
             <div className="bg-muted/30 rounded-lg p-4 mb-6">
               <p className="text-sm text-muted-foreground mb-2">
-                Can't find what you're looking for?
+                Can&apos;t find what you&apos;re looking for?
               </p>
               <div className="flex gap-2">
                 <input
@@ -202,7 +202,7 @@ export default function NotFound() {
               <HelpCircle className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Need Help?</h3>
               <p className="text-muted-foreground mb-4">
-                If you're having trouble finding what you need, our support team is here to help.
+                If you&apos;re having trouble finding what you need, our support team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="outline" className="health-btn-secondary">

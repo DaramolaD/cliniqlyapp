@@ -1,6 +1,6 @@
 "use client";
 
-import { sessionManager, Session } from './session';
+// import { sessionManager, Session } from './session';
 import { useState, useEffect } from 'react';
 
 // Client-side only session manager wrapper

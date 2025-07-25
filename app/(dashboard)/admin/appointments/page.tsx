@@ -155,7 +155,7 @@ export default function AdminAppointmentsPage() {
       location: 'Main Clinic - Room 103',
       phone: '+1 (555) 789-0123',
       patientId: 'P007',
-      doctorId: null,
+      doctorId: "D005",
       assignedBy: 'Admin'
     }
   ];
